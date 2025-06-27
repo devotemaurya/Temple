@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>धन्यवाद 🙏</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body class="bg-green-50 flex items-center justify-center h-screen relative overflow-hidden">
+  
+  <!-- Success Box -->
+  <div class="bg-white shadow-lg rounded-lg p-10 text-center max-w-md z-10">
+    <h1 class="text-3xl font-bold text-green-600 mb-4">धन्यवाद 🙏</h1>
+    <p class="text-gray-700 mb-6">आपकी प्रतिक्रिया सफलतापूर्वक भेज दी गई है।</p>
+    <a href="index.html" class="inline-block bg-green-500 text-white font-semibold px-6 py-2 rounded hover:bg-green-600 transition">
+      होम पेज पर लौटें
+    </a>
+  </div>
+
+  <!-- Audio Bell -->
+  <audio id="ding" src="https://assets.mixkit.co/sfx/preview/mixkit-bell-notification-933.mp3"></audio>
+
+  <!-- JS: Confetti + Sound -->
+  <script>
+    // Bell Sound
+    const audio = document.getElementById('ding');
+    audio.play();
+
+    // Confetti burst
+    const duration = 3 * 1000;
+    const animationEnd = Date.now() + duration;
+    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+    function randomInRange(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    const interval = setInterval(function() {
+      const timeLeft = animationEnd - Date.now();
+
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+
+      confetti({
+        ...defaults,
+        particleCount: 40,
+        origin: { x: randomInRange(0.1, 0.9), y: Math.random() - 0.2 }
+      });
+    }, 250);
+  </script>
+
+</body>
+</html>

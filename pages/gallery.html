@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery | दुगधेश्वर नाथ महादेव मंदिर</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Lightbox CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #1f1f1f;
+    }
+
+    .swiper {
+      width: 100%;
+      padding-bottom: 60px;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.4s ease;
+    }
+
+    .swiper-slide img {
+      border-radius: 1rem;
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+      transition: all 0.4s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+
+    .swiper-slide-active img {
+      transform: scale(1.2);
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+      border: 3px solid #333;
+    }
+
+    .swiper-slide-prev img,
+    .swiper-slide-next img {
+      transform: scale(0.9);
+      filter: brightness(0.6) blur(1.5px);
+    }
+  </style>
+</head>
+<body class="font-sans text-white">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full bg-gray-900 shadow z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
+      <div class="text-xl font-bold text-orange-300">🔱 दुगधेश्वर नाथ</div>
+      <nav>
+        <ul class="flex gap-6 text-orange-200 font-medium">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="contributors.html">Contributors</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="gallery.html" class="underline">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main class="pt-28 max-w-6xl mx-auto px-4 text-center">
+    <h1 class="text-3xl font-bold text-orange-200 mb-10 tracking-wide">✨ मंदिर गैलरी</h1>
+
+    <!-- Swiper Slider -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <a href="../images/gallery1.jpg" class="glightbox" data-gallery="mandir">
+            <img src="../images/gallery1.jpg" alt="Gallery 1" />
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="../images/gallery2.jpg" class="glightbox" data-gallery="mandir">
+            <img src="../images/gallery2.jpg" alt="Gallery 2" />
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="../images/gallery3.jpg" class="glightbox" data-gallery="mandir">
+            <img src="../images/gallery3.jpg" alt="Gallery 3" />
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="../images/gallery4.jpg" class="glightbox" data-gallery="mandir">
+            <img src="../images/gallery4.jpg" alt="Gallery 4" />
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="../images/gallery5.jpg" class="glightbox" data-gallery="mandir">
+            <img src="../images/gallery5.jpg" alt="Gallery 5" />
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="../images/gallery6.jpg" class="glightbox" data-gallery="mandir">
+            <img src="../images/gallery6.jpg" alt="Gallery 6" />
+          </a>
+        </div>
+        
+        <div class="swiper-slide">
+          <a href="../images/gallery7.jpg" class="glightbox" data-gallery="mandir">
+            <img src="../images/gallery7.jpg" alt="Gallery 7" />
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="../images/gallery8.jpg" class="glightbox" data-gallery="mandir">
+            <img src="../images/gallery8.jpg" alt="Gallery 8" />
+          </a>
+        </div>
+        
+      </div>
+
+      <!-- Swiper Controls -->
+      <div class="swiper-pagination mt-4"></div>
+      <div class="swiper-button-prev text-white"></div>
+      <div class="swiper-button-next text-white"></div>
+    </div>
+  </main>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Lightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+  <!-- Init Scripts -->
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: 1.2,
+      spaceBetween: 30,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+
+    const lightbox = GLightbox({ selector: '.glightbox' });
+  </script>
+</body>
+</html>

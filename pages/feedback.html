@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback | दुगधेश्वर नाथ महादेव मंदिर</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-orange-50 font-sans">
+  <!-- Navbar -->
+  <header class="fixed w-full bg-orange-100 shadow-md z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
+      <div class="text-xl font-bold text-orange-800">🔱 दुगधेश्वर नाथ</div>
+      <nav>
+        <ul class="flex gap-6 text-orange-700 font-medium">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="contributors.html">Contributors</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="feedback.html" class="underline">Feedback</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main class="pt-28 px-4 max-w-xl mx-auto">
+    <h1 class="text-3xl font-bold text-center text-orange-900 mb-6">💬 अपनी प्रतिक्रिया दें</h1>
+    <form action="https://formsubmit.co/smileymaurya87@gmail.com" method="POST" class="bg-white shadow-md rounded-lg p-6 space-y-4">
+
+      <!-- Prevent Spam -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="box">
+      <input type="hidden" name="_subject" value="🕉️ नया Feedback आया है!">
+      <input type="hidden" name="_next" value="../thankyou.html">
+
+      <div>
+        <label class="block text-orange-700 font-semibold">नाम (Name)</label>
+        <input type="text" name="name" required placeholder="आपका नाम" class="w-full mt-1 px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-300" />
+      </div>
+
+      <div>
+        <label class="block text-orange-700 font-semibold">ईमेल (Email)</label>
+        <input type="email" name="email" required placeholder="example@gmail.com" class="w-full mt-1 px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-300" />
+      </div>
+
+      <div>
+        <label class="block text-orange-700 font-semibold">संदेश (Message)</label>
+        <textarea name="message" required rows="4" placeholder="आप क्या कहना चाहते हैं?" class="w-full mt-1 px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-300"></textarea>
+      </div>
+
+      <button type="submit" class="bg-orange-500 text-white font-semibold px-6 py-2 rounded hover:bg-orange-600 transition">भेजें (Submit)</button>
+    </form>
+  </main>
+</body>
+</html>

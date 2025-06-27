@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | दुगधेश्वर नाथ महादेव मंदिर</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .event-img {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .event-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body class="bg-orange-50 font-sans">
+  <!-- Navbar -->
+  <header class="fixed w-full bg-orange-100 shadow-md z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
+      <div class="text-xl font-bold text-orange-800">🔱 दुगधेश्वर नाथ</div>
+      <nav>
+        <ul class="flex gap-6 text-orange-700 font-medium">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="contributors.html">Contributors</a></li>
+          <li><a href="events.html" class="underline">Events</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main class="pt-28 max-w-4xl mx-auto px-4">
+    <h1 class="text-3xl font-bold text-center text-orange-900 mb-6">📜 मंदिर के कार्यक्रम</h1>
+
+    <div class="flex justify-center gap-4 mb-6">
+      <button onclick="showSection('past')" class="bg-orange-300 hover:bg-orange-400 text-white font-semibold py-2 px-4 rounded">Past Events</button>
+      <button onclick="showSection('upcoming')" class="bg-orange-300 hover:bg-orange-400 text-white font-semibold py-2 px-4 rounded">Upcoming Events</button>
+    </div>
+
+    <!-- Past Events Section -->
+    <section id="past" class="space-y-6">
+      <div class="bg-white rounded-lg shadow p-5">
+        <h2 class="text-xl font-bold text-orange-700">🕉️ प्राण-प्रतिष्ठा समारोह</h2>
+        <p class="text-gray-700 mt-2">दिनांक: 2 नवंबर  2024 </p>
+        <p class="mt-2">मंदिर में भगवान शिव की प्राण-प्रतिष्ठा भव्य रूप से संपन्न हुई, जिसमें सैकड़ों श्रद्धालुओं ने भाग लिया।</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+          <img src="../images/events/pran1.jpg" alt="प्राण प्रतिष्ठा चित्र 1" class="w-full h-62 object-cover rounded-xl event-img">
+          <img src="../images/events/pran2.jpg" alt="प्राण प्रतिष्ठा चित्र 2" class="w-full h-60 object-cover rounded-xl event-img">
+         <video controls class="w-full h-72 object-cover rounded-xl sm:col-span-2">
+    <source src="../videos/pran-video1.mp4" type="video/mp4">
+    आपका ब्राउज़र वीडियो को सपोर्ट नहीं करता।
+  </video>
+</div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-5">
+        <h2 class="text-xl font-bold text-orange-700">🔥 यज्ञ महोत्सव</h2>
+        <p class="text-gray-700 mt-2">दिनांक: 4 नवंबर 2024</p>
+        <p class="mt-2">3 दिवसीय यज्ञ का आयोजन किया गया जिसमें गाँव के सभी भक्तों ने आहुति दी और शांति के लिए प्रार्थना की।</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+          <img src="../images/events/event1.jpg" alt="यज्ञ चित्र 1" class="w-full h-60 object-cover rounded-xl event-img">
+          <img src="../images/events/event2.jpg" alt="यज्ञ चित्र 2" class="w-full h-60 object-cover rounded-xl event-img">
+          <img src="../images/events/event3.jpg" alt="यज्ञ चित्र 3" class="w-full h-72 object-cover rounded-xl event-img sm:col-span-2">
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section id="upcoming" class="space-y-6 hidden">
+      <div class="bg-yellow-100 border border-yellow-300 rounded-lg shadow p-5">
+        <h2 class="text-xl font-bold text-yellow-800">🌼 सावन विशेष पूजन</h2>
+        <p class="text-gray-700 mt-2">दिनांक: 20 जुलाई 2025</p>
+        <p class="mt-2">सावन के पहले सोमवार को विशेष रुद्राभिषेक  का आयोजन किया जाएगा।</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function showSection(id) {
+      document.getElementById("past").classList.add("hidden");
+      document.getElementById("upcoming").classList.add("hidden");
+      document.getElementById(id).classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
